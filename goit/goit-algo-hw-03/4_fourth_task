@@ -6,10 +6,10 @@ def get_upcoming_birthdays(users):
 
     for user in users:
         birthday = datetime.strptime(user['birthday'], '%Y.%m.%d').date()
-        birthday = birthday.replace(year=today.year)  # Замінюємо рік на поточний рік
+        birthday = birthday.replace(year=today.year)  
 
         if birthday < today: 
-            birthday = birthday.replace(year=today.year + 1)  # Якщо дата вже минула у поточному році, то переходимо на наступний рік
+            birthday = birthday.replace(year=today.year + 1)  
 
         if (birthday - today).days <= 7:
             if birthday.weekday() in (5, 6):  
