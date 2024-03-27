@@ -6,8 +6,6 @@ def get_days_from_today(date):
         now = datetime.datetime.now()
         delta_date = now - date_datetime
         delta_in_days = delta_date.days
-        print (delta_in_days)
+        return delta_in_days
     except ValueError:
         return "Неправильний формат дати. Використовуйте 'РРРР-ММ-ДД'."
-
-get_days_from_today('2025-10-09')
